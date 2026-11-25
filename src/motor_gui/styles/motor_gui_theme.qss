@@ -1,0 +1,211 @@
+/* 测风电机控制 — 深色工业风主题（仅影响 Qt 控件外观） */
+
+QWidget#motor_guiClass {
+    background-color: #141c27;
+    color: #e8eef5;
+    font-family: "Microsoft YaHei UI", "微软雅黑", "PingFang SC", sans-serif;
+}
+
+QLabel {
+    color: #d0dae8;
+    background: transparent;
+}
+
+QLabel#label_6 {
+    color: #5eb3ff;
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+QLabel#label_5 {
+    color: #ffffff;
+    background-color: rgba(20, 40, 65, 0.85);
+    border: 2px solid #2d8cff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    qproperty-alignment: AlignCenter;
+}
+
+QLabel#label {
+    background-color: #243044;
+    border: 2px solid #3d9a5a;
+    border-radius: 6px;
+    color: #b8f0c8;
+    padding: 4px;
+}
+
+QLabel#label_3 {
+    color: #00e5ff;
+    font-size: 36pt;
+    font-weight: bold;
+}
+
+QLabel#label_9 {
+    background-color: rgba(30, 50, 70, 0.9);
+    border: 2px solid #c9a227;
+    border-radius: 6px;
+    padding: 4px;
+    color: #ffe08a;
+}
+
+/* 主操作按钮 — 运行时 setStyleSheet 仍可覆盖 */
+QPushButton {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-weight: bold;
+    color: #ffffff;
+    min-height: 28px;
+}
+
+QPushButton:hover {
+    border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+QPushButton:pressed {
+    padding-top: 10px;
+    padding-bottom: 6px;
+}
+
+QPushButton:disabled {
+    background-color: #3a4555;
+    color: #8899aa;
+}
+
+QPushButton#pushButton1 {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #33b5ff, stop:1 #0077c2);
+    font-size: 18pt;
+}
+
+QPushButton#pushButton2 {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #8ee87a, stop:1 #3da832);
+    color: #0a2a10;
+    font-size: 15pt;
+}
+
+QPushButton#pushButton3 {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ff6b6e, stop:1 #c62828);
+    font-size: 20pt;
+}
+
+QPushButton#pushButton_hide {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ffb74d, stop:1 #e65100);
+    font-size: 10pt;
+    border-radius: 6px;
+}
+
+QPushButton#pushButton_North,
+QPushButton#pushButton_East,
+QPushButton#pushButton_South,
+QPushButton#pushButton_West {
+    background-color: #2a3d52;
+    border: 2px solid #4a6a8a;
+    border-radius: 26px;
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 16pt;
+}
+
+QPushButton#pushButton_North:hover,
+QPushButton#pushButton_East:hover,
+QPushButton#pushButton_South:hover,
+QPushButton#pushButton_West:hover {
+    background-color: #3a5570;
+    border-color: #6eb6ff;
+}
+
+QPushButton#left,
+QPushButton#right {
+    background-color: #2a3545;
+    border: 2px solid #ff8c42;
+    border-radius: 8px;
+    color: #ffab70;
+    font-size: 18pt;
+}
+
+QPushButton#pushButton_sensor {
+    background-color: #2ecc71;
+    border-radius: 6px;
+    color: #0d2818;
+    font-weight: bold;
+}
+
+QComboBox, QDoubleSpinBox, QSlider {
+    background-color: #1e2a3a;
+    color: #e8eef5;
+    border: 1px solid #3d5a73;
+    border-radius: 6px;
+    padding: 4px 8px;
+    min-height: 24px;
+}
+
+QComboBox:hover, QDoubleSpinBox:hover {
+    border-color: #5eb3ff;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 22px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #1e2a3a;
+    color: #e8eef5;
+    selection-background-color: #2d8cff;
+}
+
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+    background: #2a3d52;
+    border-radius: 3px;
+}
+
+QDial {
+    background-color: #1a2838;
+    color: #5eb3ff;
+}
+
+QDial#dial {
+    background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0,
+        stop:0 #1e3a5f, stop:0.5 #2d8cff, stop:1 #1e3a5f);
+}
+
+QDial#dial_2 {
+    background-color: #1e3328;
+    color: #7dcea0;
+}
+
+QProgressBar {
+    background-color: #1e2a3a;
+    border: 1px solid #3d5a73;
+    border-radius: 6px;
+    text-align: center;
+    color: #e8eef5;
+}
+
+QProgressBar::chunk {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #00c9a7, stop:0.5 #2d8cff, stop:1 #7c4dff);
+    border-radius: 5px;
+}
+
+QSlider::groove:horizontal {
+    height: 6px;
+    background: #2a3545;
+    border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+    background: #2d8cff;
+    width: 14px;
+    margin: -5px 0;
+    border-radius: 7px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #2d8cff;
+    border-radius: 3px;
+}

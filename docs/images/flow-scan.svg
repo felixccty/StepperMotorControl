@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 594" width="100%" font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Microsoft YaHei, sans-serif'>
+  <title>寻北与四方位扫描流程</title>
+  <desc>齿轮比来自 comboBox_gear（-6.0 / 2.0 / 1.75），保存在 D:/motor_control.ini。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <text x="40" y="32" font-size="16" font-weight="500" fill="#2C2C2A">寻北与四方位扫描流程</text>
+  <rect x="90" y="56" width="500" height="58" rx="8" fill="#E6F1FB" stroke="#85B7EB" stroke-width="0.5"/>
+  <circle cx="116" cy="85.0" r="13" fill="#185FA5"/>
+  <text x="116" y="85.0" font-size="12" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
+  <text x="140" y="76.0" font-size="13" font-weight="500" fill="#2C2C2A" dominant-baseline="central">寻北归零</text>
+  <text x="140" y="96.0" font-size="11" fill="#5F5E5A" dominant-baseline="central">search_north()：cfgZero / zeroStart，等待状态 0x180</text>
+  <line x1="340.0" y1="114" x2="340.0" y2="144" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="90" y="144" width="500" height="58" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
+  <circle cx="116" cy="173.0" r="13" fill="#0F6E56"/>
+  <text x="116" y="173.0" font-size="12" fill="#ffffff" text-anchor="middle" dominant-baseline="central">2</text>
+  <text x="140" y="164.0" font-size="13" font-weight="500" fill="#2C2C2A" dominant-baseline="central">驱动参数配置</text>
+  <text x="140" y="184.0" font-size="11" fill="#5F5E5A" dominant-baseline="central">cfgMcs(8)、cfgCurrent、cfgSpd/Acc/Dec、org()</text>
+  <line x1="340.0" y1="202" x2="340.0" y2="232" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="90" y="232" width="500" height="58" rx="8" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="0.5"/>
+  <circle cx="116" cy="261.0" r="13" fill="#534AB7"/>
+  <text x="116" y="261.0" font-size="12" fill="#ffffff" text-anchor="middle" dominant-baseline="central">3</text>
+  <text x="140" y="252.0" font-size="13" font-weight="500" fill="#2C2C2A" dominant-baseline="central">步进与位置反馈</text>
+  <text x="140" y="272.0" font-size="11" fill="#5F5E5A" dominant-baseline="central">moveto(position+12800×ratio)，getCurPos() 换算方位角</text>
+  <line x1="340.0" y1="290" x2="340.0" y2="320" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="90" y="320" width="500" height="58" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+  <circle cx="116" cy="349.0" r="13" fill="#5F5E5A"/>
+  <text x="116" y="349.0" font-size="12" fill="#ffffff" text-anchor="middle" dominant-baseline="central">4</text>
+  <text x="140" y="340.0" font-size="13" font-weight="500" fill="#2C2C2A" dominant-baseline="central">到达 0/90/180/270</text>
+  <text x="140" y="360.0" font-size="11" fill="#5F5E5A" dominant-baseline="central">高亮方向按钮，send_direction() 写 WHAngle 并 SetEvent</text>
+  <line x1="340.0" y1="378" x2="340.0" y2="408" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="90" y="408" width="500" height="58" rx="8" fill="#FCE7EF" stroke="#EC9BC0" stroke-width="0.5"/>
+  <circle cx="116" cy="437.0" r="13" fill="#9C3D68"/>
+  <text x="116" y="437.0" font-size="12" fill="#ffffff" text-anchor="middle" dominant-baseline="central">5</text>
+  <text x="140" y="428.0" font-size="13" font-weight="500" fill="#2C2C2A" dominant-baseline="central">驻留与进度条</text>
+  <text x="140" y="448.0" font-size="11" fill="#5F5E5A" dominant-baseline="central">doubleSpinBox_wait 秒驻留，progressBar 0→100</text>
+  <line x1="340.0" y1="466" x2="340.0" y2="496" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="90" y="496" width="500" height="58" rx="8" fill="#FAEEDA" stroke="#E8B562" stroke-width="0.5"/>
+  <circle cx="116" cy="525.0" r="13" fill="#854F0B"/>
+  <text x="116" y="525.0" font-size="12" fill="#ffffff" text-anchor="middle" dominant-baseline="central">6</text>
+  <text x="140" y="516.0" font-size="13" font-weight="500" fill="#2C2C2A" dominant-baseline="central">周期复位</text>
+  <text x="140" y="536.0" font-size="11" fill="#5F5E5A" dominant-baseline="central">3500 次过北后 org/disable，重新归零</text>
+</svg>

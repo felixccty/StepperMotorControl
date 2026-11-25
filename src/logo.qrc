@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>felix_logo.jpg</file>
+  </qresource>
+  <qresource prefix="2">
+    <file>felix_logo.jpg</file>
+  </qresource>
+</RCC>
